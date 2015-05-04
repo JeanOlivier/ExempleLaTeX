@@ -1,0 +1,96 @@
+% Exemple de document LaTeX
+% Jean Olivier Simoneau <jean.olivier.simoneau@usherbrooke.ca>
+%
+% Licensié sous la license MIT, voir LICENSE.TXT ou http://opensource.org/licenses/MIT
+
+% Garder une seule ligne "\documentclass" décommentée, selon le style de document voulu.
+\documentclass[letterpaper,12pt]{article} % Document simple colonne, style rapport court.
+%\documentclass[letterpaper,prl,twocolumn]{revtex4-fr} % Document deux colonnes, style article
+% (revtex4 est incompatible avec le package multicol, à commenter dans entete.sty)
+
+\usepackage{entete,commandes} % Classes contenant les packages et newcommands utilisés
+
+\begin{document}
+\title{Super Titre}
+\author{Auteur(es) prometteur(euses)}
+\date{\today}
+
+\maketitle
+
+\section{Introduction}
+\input{placeholder}
+
+\section{Théorie}
+\input{placeholder}
+
+\begin{align}
+\label{th_einstein}
+E=\frac{mc^2}{\gamma}
+\end{align}
+
+\input{placeholder}
+
+\section{Partie expérimentale}
+\input{placeholder}
+
+\section{Résultats}
+\input{placeholder}
+
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=\linewidth]{Images/image.jpg}
+\caption{Caption intelligent et complet. Blahblah blah. \cite{key1}}
+\label{Chien_Ponctuel}
+\end{center}
+\end{figure}
+
+\input{placeholder}
+
+
+\section{Analyse}
+La \figref{Chien_Ponctuel} démontre clairement que la nature n'agit pas tel que~\eqref{th_einstein} ne le laisse sous-entendre. Voir la \figref{an_SeriouslyWhat?} pour une démonstration plus flagrante. Une dérivation complète se retrouve en \cite{keyPertinent} au chapitre $\Psi$. 
+
+\input{placeholder}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=\linewidth]{Images/image2.jpg}
+\caption{\label{an_SeriouslyWhat?} Caption complet, épique avec référence importante à la \figref{an_SeriouslyWhat?}. Note: PAS un Nydus Canal. \cite{keyPertinent}}
+\end{center}
+\end{figure}
+
+\input{placeholder}
+
+\section{Conclusion}
+\input{placeholder}
+
+\bibliography{document}
+
+
+\appendix
+\section{Calculs d'incertitude}
+En regardant la \figref{ann_nostalgia}, les cobayes ont dit ressentir environ $9.0\,\pm\,0.5$ d'incertitude quant à la validité de~\eqref{th_einstein}. Dix-neuf fois sur vingt.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=\columnwidth]{Images/image4.jpg}
+\caption{\label{ann_nostalgia} Creer es poder. Deux sources: \cite{key1,keyPertinent} }
+\end{center}
+\end{figure}
+
+\input{placeholderSmall}
+
+\section{Bonus}
+Bonus parce que t'sais! 
+
+\input{placeholderSmall}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[width=\columnwidth]{Images/image3.jpg}
+\caption{\label{} Nostalgie de la bea(s)t generation! \cite{keyPertinent}}
+\end{center}
+\end{figure}
+
+\end{document}

@@ -1,0 +1,104 @@
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{entete}[2015/05/04]
+
+%Paquets utilisés
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry} % Marges moins grosses
+\usepackage[greek, english, frenchb]{babel}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{graphicx,listings,color,comment}
+\usepackage{cmap}
+\usepackage[usenames,dvipsnames,svgnames,x11names]{xcolor}
+\usepackage{amsmath,amssymb,bm,upgreek}%,esint}
+\usepackage{multirow,comment,array,listings,url}
+\usepackage{caption}
+%\usepackage{multicol}
+%\usepackage[version=3]{mhchem} % La commande \ce{} permet d'écrire des formules chimiques
+%\usepackage{fixltx2e}
+%\usepackage{dcolumn}
+
+% Hyperrefs
+\usepackage{hyperref}
+\hypersetup{
+    hyperindex=true,
+    bookmarks=true,
+    pdfa,
+    %pdftex,
+    colorlinks=true,
+    breaklinks=true,
+    urlcolor=Red3,
+    linkcolor=Blue3,
+    citecolor=Green4,
+    bookmarksopen=true,
+}
+\usepackage[hyperpageref]{backref}
+
+
+%Mise en page française
+\addto\captionsfrench{\def\figurename{{\sc Figure}}}
+\addto\captionsfrench{\def\tablename{{\sc Tableau}}}
+
+%%Ajoute un style de colonne centrées verticalement
+%\newcolumntype{V}{>{\centering\arraybackslash} m{.15\linewidth} }
+%\newcolumntype{v}{>{\centering\arraybackslash} m{.08\linewidth} }
+
+
+% Utilise la police New Century Schoolbook, parce que CM est beau mais sur-utilisé
+\usepackage{newcent}
+
+% On utilise un font de math qui s'agence bien avec newcent
+\usepackage{fouriernc}
+
+% Font de mathématique appelé Millennial, doit être installé indépendamment dans le système.
+% Très beau avec newcent, mais quelques bugs présents
+% \usepackage{millennial}
+% \renewcommand{\dagger}{\text{\textdagger}} % Millennial missing dagger fix
+% \renewcommand{\iint}{\int\!\!\int}
+% \renewcommand{\iiint}{\int\!\!\int\!\!\int}
+% \renewcommand{\iiiint}{\int\!\!\int\!\!\int\!\!\int}
+
+%Bibliographie
+\bibliographystyle{unsrt-fr}
+%\newcommand{\cit}[1]{\textsuperscript{\cite{#1}}}
+
+% PDF/A stuff
+%\usepackage{pdfx,filecontents}
+%\begin{filecontents*}{\jobname.xmpdata}
+%    \Keywords{Amplificateur Paramétrique Josephson \sep Shot Noise}
+%    \Title{Mémoire préliminaire}
+%    \Author{Jean Olivier Simoneau}
+%    \Org{Univeristé de Sherbrooke}
+%\end{filecontents*}
+
+
+\newcommand{\cd}[1]{\lstinline!#1!}
+\lstset{
+language=c++,
+commentstyle=\textit,
+basicstyle=\ttfamily\color{BrickRed},
+keywordstyle=\color{OliveGreen},
+commentstyle=\color{Cyan}\normalfont,
+identifierstyle=\color{Black},
+columns=flexible,
+%frame=tblr,
+%frameround=tttt,
+tabsize=3,
+extendedchars=true,
+showspaces=false,
+showstringspaces=false,
+numbers=left,
+numberstyle=\tiny,
+breaklines=true,
+breakautoindent=true,
+captionpos=b,
+xrightmargin=0mm,
+xleftmargin=5mm,
+%texcl=true,
+mathescape=true,
+emptylines=1,
+%morecomment=[l]{//},
+moredelim=[il][\color{Blue}\it\small]{//}
+}
+
+
