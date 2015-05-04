@@ -1,7 +1,6 @@
 Exemple de document LaTeX
 Jean Olivier Simoneau <jean.olivier.simoneau@usherbrooke.ca>
 
-Licensié sous la license MIT, voir LICENSE.TXT ou http://opensource.org/licences/MIT
 
 Trois moyens de compiler sont suggérés:
 1- Via le fichier makefile qui optimise la compilation avec latexmk
@@ -17,6 +16,8 @@ Trois moyens de compiler sont suggérés:
 
 
 On suggère TeXLive comme distribution TeX/LaTeX: https://www.tug.org/texlive/
+
+Licensié sous la license MIT, voir LICENSE.TXT ou http://opensource.org/licenses/MIT
 
 Jos
 
